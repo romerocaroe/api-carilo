@@ -1,0 +1,19 @@
+{
+  "name": "api-carilo",
+  "version": "1.0.0",
+  "description": "carilo-project",
+  "main": "mongo-db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romerocaroe/api-carilo.git"
+  },
+  "author": "cromero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romerocaroe/api-carilo/issues"
+  },
+  "homepage": "https://github.com/romerocaroe/api-carilo#readme"
+}

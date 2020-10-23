@@ -1,6 +1,6 @@
 [
     {
-        "_id":1,
+        "id":1,
         "codpax":3,
         "house":"88",
         "lastname":"romero",
@@ -31,7 +31,7 @@
         "knowledgeHotel":""
     },
     {
-        "_id":2,
+        "id":2,
         "codpax":2,
         "house":"12",
         "lastname":"romero",

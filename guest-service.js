@@ -21,3 +21,14 @@ module.exports.updateGuest = (id,{codpax, house, lastname, name, typeIdentificat
     guests[index] = {id, codpax, house, lastname, name, typeIdentification, identification, nationality, birthdate, maritalStatus, profession, address, passenger, passangerName, passangerLastname, passangerBirthdate, passangerIdentification, mobilePhone, mail, car, knowledgeHotel};
     return guests[index];
 }
+
+module.exports.deleteGuest = (id) => {
+    let index = guests.findIndex(guest => guest.id == id);
+    
+    if(index === -1){
+        return false;
+    }
+    
+    guests.splice(index,1)
+    return true;
+}

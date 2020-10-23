@@ -1,6 +1,6 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
-const {fetchGuests,findGuest,createGuest, updateGuest} = require('./guest-service');
+const {fetchGuests,findGuest,createGuest, updateGuest, deleteGuest} = require('./guest-service');
 
 const typeDefs = gql`
   type address {
@@ -83,6 +83,7 @@ const typeDefs = gql`
   type Mutation {
     createGuest(input:guestInput):guest
     updateGuest(id:ID, input:guestInput):guest
+    deleteGuest(id:ID):Boolean
   }
 `;
 
@@ -100,6 +101,9 @@ const resolvers = {
     },
     updateGuest:(_,{id,input}) => {
       return updateGuest(id,input);
+    },
+    deleteGuest:(_,{id}) => {
+      return deleteGuest(id);
     }
   }
 };
